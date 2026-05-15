@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home screen widget layout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_remote_card"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/widget_padding">
+
+    <ImageButton
+        android:id="@+id/widget_btn_power"
+        android:layout_width="@dimen/widget_btn_size"
+        android:layout_height="@dimen/widget_btn_size"
+        android:background="@drawable/bg_button_circle"
+        android:contentDescription="@string/btn_power"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_power"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/widget_btn_vol_down"
+        android:layout_width="@dimen/widget_btn_size"
+        android:layout_height="@dimen/widget_btn_size"
+        android:layout_marginStart="@dimen/spacing_xs"
+        android:background="@drawable/bg_button_circle"
+        android:contentDescription="@string/btn_volume_down"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_volume_down"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/widget_btn_mute"
+        android:layout_width="@dimen/widget_btn_size"
+        android:layout_height="@dimen/widget_btn_size"
+        android:layout_marginStart="@dimen/spacing_xs"
+        android:background="@drawable/bg_button_circle"
+        android:contentDescription="@string/btn_mute"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_mute"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/widget_btn_vol_up"
+        android:layout_width="@dimen/widget_btn_size"
+        android:layout_height="@dimen/widget_btn_size"
+        android:layout_marginStart="@dimen/spacing_xs"
+        android:background="@drawable/bg_button_circle"
+        android:contentDescription="@string/btn_volume_up"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_volume_up"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</LinearLayout>

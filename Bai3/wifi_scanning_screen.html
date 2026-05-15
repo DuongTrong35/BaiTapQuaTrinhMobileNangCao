@@ -1,0 +1,102 @@
+
+<style>
+@keyframes pulse-ring {
+  0% { transform: scale(0.85); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 0.15; }
+  100% { transform: scale(0.85); opacity: 0.6; }
+}
+@keyframes pulse-ring2 {
+  0% { transform: scale(0.85); opacity: 0.4; }
+  50% { transform: scale(1.3); opacity: 0.08; }
+  100% { transform: scale(0.85); opacity: 0.4; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes dot-blink {
+  0%,80%,100% { opacity: 0.2; }
+  40% { opacity: 1; }
+}
+.dot1 { animation: dot-blink 1.4s infinite 0s; }
+.dot2 { animation: dot-blink 1.4s infinite 0.2s; }
+.dot3 { animation: dot-blink 1.4s infinite 0.4s; }
+.found-item { animation: fadeSlideIn 0.4s ease both; }
+</style>
+
+<div style="max-width:380px;margin:0 auto;font-family:'Segoe UI',sans-serif;background:#fff;min-height:700px;display:flex;flex-direction:column;border-radius:24px;overflow:hidden;border:0.5px solid var(--color-border-tertiary);">
+
+  <div style="padding:20px 20px 0;display:flex;align-items:center;gap:12px;">
+    <div onclick="" style="width:36px;height:36px;border-radius:50%;border:1.5px solid #e2e8f0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#475569;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    </div>
+    <span style="font-size:17px;font-weight:700;color:#1a1a1a;">Wifi TV Remote</span>
+    <div style="margin-left:auto;width:32px;height:32px;display:flex;align-items:center;justify-content:center;color:#94a3b8;cursor:pointer;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+    </div>
+  </div>
+
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding:40px 20px 20px;">
+
+    <div style="position:relative;width:180px;height:180px;display:flex;align-items:center;justify-content:center;margin-bottom:28px;">
+      <div style="position:absolute;width:180px;height:180px;border-radius:50%;background:#dbeafe;animation:pulse-ring2 2.2s ease-in-out infinite;"></div>
+      <div style="position:absolute;width:140px;height:140px;border-radius:50%;background:#bfdbfe;animation:pulse-ring 2.2s ease-in-out infinite 0.3s;"></div>
+      <div style="width:100px;height:100px;border-radius:50%;background:#2563eb;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12.55a11 11 0 0 1 14 0"/>
+          <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+          <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+          <circle cx="12" cy="20" r="1.2" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-bottom:6px;">
+      <span style="font-size:18px;font-weight:700;color:#1a1a1a;">Đang tìm kiếm TV</span>
+      <span style="font-size:18px;font-weight:700;color:#2563eb;">
+        <span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span>
+      </span>
+    </div>
+    <p style="font-size:13px;color:#94a3b8;text-align:center;margin:0 0 28px;">Đảm bảo TV và điện thoại cùng mạng Wifi</p>
+
+    <div style="width:100%;display:flex;flex-direction:column;gap:10px;margin-bottom:20px;">
+
+      <p style="font-size:12px;font-weight:600;color:#94a3b8;letter-spacing:0.5px;margin:0 0 4px;text-transform:uppercase;">Đã tìm thấy (2)</p>
+
+      <div class="found-item" style="animation-delay:0.1s;display:flex;align-items:center;gap:14px;background:#f8faff;border-radius:14px;padding:14px 16px;border:1.5px solid #2563eb;cursor:pointer;">
+        <div style="width:42px;height:42px;border-radius:12px;background:#dbeafe;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <p style="margin:0;font-size:14px;font-weight:600;color:#1a1a1a;">Samsung Smart TV</p>
+          <p style="margin:2px 0 0;font-size:12px;color:#64748b;">192.168.1.5 · UHD 4K</p>
+        </div>
+        <div style="width:8px;height:8px;border-radius:50%;background:#22c55e;flex-shrink:0;"></div>
+      </div>
+
+      <div class="found-item" style="animation-delay:0.5s;display:flex;align-items:center;gap:14px;background:#fff;border-radius:14px;padding:14px 16px;border:0.5px solid #e2e8f0;cursor:pointer;">
+        <div style="width:42px;height:42px;border-radius:12px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <p style="margin:0;font-size:14px;font-weight:600;color:#1a1a1a;">LG OLED TV</p>
+          <p style="margin:2px 0 0;font-size:12px;color:#64748b;">192.168.1.8 · OLED C3</p>
+        </div>
+        <div style="width:8px;height:8px;border-radius:50%;background:#22c55e;flex-shrink:0;"></div>
+      </div>
+
+    </div>
+
+    <div style="width:100%;border-top:0.5px solid #f1f5f9;padding-top:16px;">
+      <p style="font-size:12px;color:#94a3b8;text-align:center;margin:0 0 12px;">Không tìm thấy TV của bạn?</p>
+      <button style="width:100%;background:transparent;border:1px solid #e2e8f0;border-radius:12px;padding:12px;font-size:14px;color:#475569;cursor:pointer;font-weight:500;">
+        Thêm TV thủ công
+      </button>
+    </div>
+
+  </div>
+
+</div>

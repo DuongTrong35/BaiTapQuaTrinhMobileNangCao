@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Quick App Launcher Grid -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_sm"
+        android:text="@string/label_quick_apps"
+        android:textAppearance="@style/TextAppearance.LGRemotePro.Body"
+        android:textColor="@color/text_secondary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="0.5"/>
+
+        <ImageButton
+            android:id="@+id/btn_netflix"
+            style="@style/Widget.LGRemotePro.Button.App"
+            android:src="@drawable/ic_netflix"
+            android:backgroundTint="#333333"
+            android:scaleType="centerInside"
+            android:padding="6dp"
+            android:contentDescription="@string/btn_netflix" />
+
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/btn_youtube"
+            style="@style/Widget.LGRemotePro.Button.App"
+            android:src="@drawable/ic_youtube"
+            android:backgroundTint="#333333"
+            android:scaleType="centerInside"
+            android:padding="6dp"
+            android:contentDescription="@string/btn_youtube" />
+
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/btn_prime"
+            style="@style/Widget.LGRemotePro.Button.App"
+            android:src="@drawable/ic_prime"
+            android:backgroundTint="#333333"
+            android:scaleType="centerInside"
+            android:padding="6dp"
+            android:contentDescription="@string/btn_prime_video" />
+
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/btn_disney"
+            style="@style/Widget.LGRemotePro.Button.App"
+            android:src="@drawable/ic_disney"
+            android:backgroundTint="#333333"
+            android:scaleType="centerInside"
+            android:padding="6dp"
+            android:contentDescription="@string/btn_disney_plus" />
+
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="0.5"/>
+    </LinearLayout>
+
+</LinearLayout>

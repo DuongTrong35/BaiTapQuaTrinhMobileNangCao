@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- ── Primary Colors ───────────────────────────────── -->
+    <color name="background">#0A0A0F</color>
+    <color name="surface">#14141E</color>
+    <color name="surface_elevated">#1A1A28</color>
+    <color name="primary_accent">#00C2FF</color>
+    <color name="secondary_accent">#7B2FFF</color>
+    <color name="button_active">#1E1E2E</color>
+    <color name="button_pressed">#2A2A3E</color>
+    <color name="text_primary">#F0F0FF</color>
+    <color name="text_secondary">#8A8AA8</color>
+    <color name="success">#00E676</color>
+    <color name="danger">#FF4757</color>
+
+    <!-- ── Gradient Colors ──────────────────────────────── -->
+    <color name="gradient_start">#0A0A0F</color>
+    <color name="gradient_end">#0F0F1A</color>
+    <color name="accent_gradient_start">#00C2FF</color>
+    <color name="accent_gradient_end">#7B2FFF</color>
+
+    <!-- ── Button States ────────────────────────────────── -->
+    <color name="button_normal">#1E1E2E</color>
+    <color name="button_ripple">#3300C2FF</color>
+    <color name="button_disabled">#141420</color>
+
+    <!-- ── App Brand Colors ─────────────────────────────── -->
+    <color name="netflix_red">#E50914</color>
+    <color name="youtube_red">#FF0000</color>
+    <color name="prime_blue">#00A8E1</color>
+    <color name="disney_blue">#113CCF</color>
+
+    <!-- ── Status Colors ────────────────────────────────── -->
+    <color name="status_connected">#00E676</color>
+    <color name="status_disconnected">#FF4757</color>
+    <color name="status_connecting">#FFD32A</color>
+
+    <!-- ── Glass Effect ─────────────────────────────────── -->
+    <color name="glass_surface">#CC14141E</color>
+    <color name="glass_border">#3300C2FF</color>
+
+    <!-- ── Light Theme Overrides ────────────────────────── -->
+    <color name="background_light">#F5F5FA</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="text_primary_light">#1A1A2E</color>
+    <color name="text_secondary_light">#6A6A8A</color>
+    <color name="button_active_light">#E8E8F0</color>
+
+    <!-- ── Bottom Nav ───────────────────────────────────── -->
+    <color name="bottom_nav_background">#0F0F18</color>
+    <color name="bottom_nav_indicator">#1A1A2E</color>
+
+    <!-- ── Onboarding ───────────────────────────────────── -->
+    <color name="onboarding_dot_active">#00C2FF</color>
+    <color name="onboarding_dot_inactive">#33FFFFFF</color>
+
+    <!-- White/Black utilities -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
 </resources>

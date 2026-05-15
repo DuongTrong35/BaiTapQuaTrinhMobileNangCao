@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Volume & Channel Control Strip -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <!-- Volume Controls -->
+    <LinearLayout
+        android:id="@+id/volume_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_volume"
+            android:textAppearance="@style/TextAppearance.LGRemotePro.Caption"
+            android:textColor="@color/text_secondary" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:background="@drawable/bg_button_rect"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/spacing_xs"
+            android:paddingEnd="@dimen/spacing_xs">
+
+            <ImageButton
+                android:id="@+id/btn_vol_down"
+                style="@style/Widget.LGRemotePro.Button.Circle.Small"
+                android:contentDescription="@string/btn_volume_down"
+                android:src="@drawable/ic_volume_down"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/tv_volume_level"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="--"
+                android:textColor="@color/primary_accent"
+                android:textSize="@dimen/text_subtitle"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btn_vol_up"
+                style="@style/Widget.LGRemotePro.Button.Circle.Small"
+                android:contentDescription="@string/btn_volume_up"
+                android:src="@drawable/ic_volume_up"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_mute"
+            style="@style/Widget.LGRemotePro.Button.Circle.Small"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:contentDescription="@string/btn_mute"
+            android:src="@drawable/ic_mute"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="@dimen/spacing_lg"
+        android:layout_marginEnd="@dimen/spacing_lg"
+        android:background="@color/glass_border" />
+
+    <!-- Channel Controls -->
+    <LinearLayout
+        android:id="@+id/channel_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_channel"
+            android:textAppearance="@style/TextAppearance.LGRemotePro.Caption"
+            android:textColor="@color/text_secondary" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:background="@drawable/bg_button_rect"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/spacing_xs"
+            android:paddingBottom="@dimen/spacing_xs">
+
+            <ImageButton
+                android:id="@+id/btn_ch_up"
+                style="@style/Widget.LGRemotePro.Button.Circle.Small"
+                android:contentDescription="@string/btn_channel_up"
+                android:src="@drawable/ic_arrow_up"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/spacing_lg"
+                android:paddingEnd="@dimen/spacing_lg"
+                android:text="CH"
+                android:textColor="@color/primary_accent"
+                android:textSize="@dimen/text_caption"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btn_ch_down"
+                style="@style/Widget.LGRemotePro.Button.Circle.Small"
+                android:contentDescription="@string/btn_channel_down"
+                android:src="@drawable/ic_arrow_down"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

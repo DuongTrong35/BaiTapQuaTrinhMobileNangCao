@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/settings_connection">
+
+        <Preference
+            android:key="forget_device"
+            android:title="@string/settings_forget_device"
+            android:icon="@drawable/ic_devices_tab" />
+
+        <Preference
+            android:key="re_pair"
+            android:title="@string/settings_re_pair"
+            android:icon="@drawable/ic_remote_tab" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_remote_custom">
+
+        <SwitchPreferenceCompat
+            android:key="compact_layout"
+            android:title="@string/settings_compact_layout"
+            android:summary="@string/settings_compact_layout_desc"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="haptic_enabled"
+            android:title="@string/settings_haptic"
+            android:summary="@string/settings_haptic_desc"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_appearance">
+
+        <ListPreference
+            android:key="theme_mode"
+            android:title="@string/settings_theme"
+            android:defaultValue="dark"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_notifications">
+
+        <SwitchPreferenceCompat
+            android:key="disconnect_alert"
+            android:title="@string/settings_disconnect_alert"
+            android:summary="@string/settings_disconnect_alert_desc"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_about">
+
+        <Preference
+            android:key="app_version"
+            android:title="@string/settings_version"
+            android:selectable="false" />
+
+        <Preference
+            android:key="licenses"
+            android:title="@string/settings_licenses" />
+
+        <Preference
+            android:key="feedback"
+            android:title="@string/settings_feedback" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

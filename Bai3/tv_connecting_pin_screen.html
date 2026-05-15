@@ -1,0 +1,149 @@
+
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+@keyframes success-pop { 0%{transform:scale(0.5);opacity:0} 60%{transform:scale(1.15)} 100%{transform:scale(1);opacity:1} }
+.screen { display:none; animation:fadeIn 0.35s ease both; }
+.screen.active { display:flex; }
+.spin { animation:spin 1s linear infinite; }
+.pin-box { width:52px;height:60px;border-radius:12px;border:2px solid #e2e8f0;font-size:24px;font-weight:700;color:#1a1a1a;text-align:center;background:#fff;outline:none;transition:border-color 0.2s; }
+.pin-box:focus { border-color:#2563eb; }
+.pin-box.filled { border-color:#2563eb;background:#f8faff; }
+</style>
+
+<div style="max-width:380px;margin:0 auto;font-family:'Segoe UI',sans-serif;background:#fff;min-height:680px;border-radius:24px;border:0.5px solid var(--color-border-tertiary);overflow:hidden;">
+
+  <!-- SCREEN 1: Connecting -->
+  <div id="s1" class="screen active" style="flex-direction:column;align-items:center;padding:28px 24px;min-height:680px;">
+
+    <div style="width:100%;display:flex;align-items:center;gap:12px;margin-bottom:48px;">
+      <div style="width:36px;height:36px;border-radius:50%;border:1.5px solid #e2e8f0;display:flex;align-items:center;justify-content:center;cursor:pointer;" onclick="showScreen('s0')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </div>
+      <span style="font-size:17px;font-weight:700;color:#1a1a1a;">Wifi TV Remote</span>
+    </div>
+
+    <div style="position:relative;width:120px;height:120px;margin-bottom:32px;">
+      <svg class="spin" style="position:absolute;top:0;left:0;" width="120" height="120" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="54" fill="none" stroke="#e2e8f0" stroke-width="6"/>
+        <circle cx="60" cy="60" r="54" fill="none" stroke="#2563eb" stroke-width="6"
+          stroke-dasharray="100 240" stroke-linecap="round"/>
+      </svg>
+      <div style="position:absolute;inset:12px;border-radius:50%;background:#dbeafe;display:flex;align-items:center;justify-content:center;">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+        </svg>
+      </div>
+    </div>
+
+    <p style="font-size:18px;font-weight:700;color:#1a1a1a;margin:0 0 6px;text-align:center;">Đang kết nối...</p>
+    <p style="font-size:14px;color:#64748b;margin:0 0 4px;text-align:center;font-weight:600;">Samsung Smart TV</p>
+    <p style="font-size:13px;color:#94a3b8;margin:0 0 40px;text-align:center;">192.168.1.5</p>
+
+    <div style="width:100%;background:#f8faff;border-radius:16px;padding:16px 18px;border:1px solid #dbeafe;margin-bottom:24px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        <span style="font-size:13px;font-weight:600;color:#2563eb;">Hướng dẫn</span>
+      </div>
+      <p style="font-size:13px;color:#475569;margin:0;line-height:1.6;">Trên TV Samsung của bạn sẽ xuất hiện thông báo <b>"Cho phép kết nối?"</b> — hãy chọn <b>Chấp nhận</b> để tiếp tục.</p>
+    </div>
+
+    <div style="width:100%;margin-top:auto;">
+      <button onclick="showScreen('s2')" style="width:100%;background:#2563eb;border:none;border-radius:14px;padding:15px;font-size:15px;font-weight:600;color:#fff;cursor:pointer;margin-bottom:10px;">TV đã chấp nhận →</button>
+      <button onclick="showScreen('s3')" style="width:100%;background:transparent;border:1px solid #e2e8f0;border-radius:14px;padding:13px;font-size:14px;font-weight:500;color:#64748b;cursor:pointer;">Nhập mã PIN thay thế</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 2: PIN Input -->
+  <div id="s2" class="screen" style="flex-direction:column;align-items:center;padding:28px 24px;min-height:680px;">
+
+    <div style="width:100%;display:flex;align-items:center;gap:12px;margin-bottom:48px;">
+      <div style="width:36px;height:36px;border-radius:50%;border:1.5px solid #e2e8f0;display:flex;align-items:center;justify-content:center;cursor:pointer;" onclick="showScreen('s1')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </div>
+      <span style="font-size:17px;font-weight:700;color:#1a1a1a;">Nhập mã PIN</span>
+    </div>
+
+    <div style="width:64px;height:64px;border-radius:20px;background:#dbeafe;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+    </div>
+
+    <p style="font-size:18px;font-weight:700;color:#1a1a1a;margin:0 0 8px;text-align:center;">Mã PIN trên TV</p>
+    <p style="font-size:13px;color:#94a3b8;text-align:center;margin:0 0 32px;line-height:1.6;">Nhìn vào màn hình <b style="color:#475569;">Samsung Smart TV</b><br>và nhập mã 4 số hiển thị</p>
+
+    <div style="display:flex;gap:12px;margin-bottom:32px;">
+      <input class="pin-box" id="p1" maxlength="1" type="text" inputmode="numeric" oninput="pinInput(this,'p2')" onkeydown="pinBack(event,this,null)"/>
+      <input class="pin-box" id="p2" maxlength="1" type="text" inputmode="numeric" oninput="pinInput(this,'p3')" onkeydown="pinBack(event,this,'p1')"/>
+      <input class="pin-box" id="p3" maxlength="1" type="text" inputmode="numeric" oninput="pinInput(this,'p4')" onkeydown="pinBack(event,this,'p2')"/>
+      <input class="pin-box" id="p4" maxlength="1" type="text" inputmode="numeric" oninput="pinInput(this,null)" onkeydown="pinBack(event,this,'p3')"/>
+    </div>
+
+    <button id="btnConfirm" onclick="showScreen('s3')" style="width:100%;background:#cbd5e1;border:none;border-radius:14px;padding:15px;font-size:15px;font-weight:600;color:#fff;cursor:not-allowed;transition:all 0.2s;" disabled>Xác nhận</button>
+
+    <p style="font-size:12px;color:#94a3b8;margin-top:20px;text-align:center;">Không thấy mã PIN?<br><span style="color:#2563eb;cursor:pointer;" onclick="showScreen('s1')">Thử kết nối lại</span></p>
+  </div>
+
+  <!-- SCREEN 3: Success -->
+  <div id="s3" class="screen" style="flex-direction:column;align-items:center;justify-content:center;padding:28px 24px;min-height:680px;text-align:center;">
+
+    <div style="width:100px;height:100px;border-radius:50%;background:#dcfce7;display:flex;align-items:center;justify-content:center;margin-bottom:24px;animation:success-pop 0.5s ease both;">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+
+    <p style="font-size:22px;font-weight:700;color:#1a1a1a;margin:0 0 8px;">Đã kết nối!</p>
+    <p style="font-size:14px;font-weight:600;color:#2563eb;margin:0 0 4px;">Samsung Smart TV</p>
+    <p style="font-size:13px;color:#94a3b8;margin:0 0 48px;">192.168.1.5 · UHD 4K</p>
+
+    <div style="width:100%;background:#f8faff;border-radius:16px;padding:16px 18px;border:1px solid #dbeafe;text-align:left;margin-bottom:32px;">
+      <p style="font-size:12px;color:#94a3b8;margin:0 0 12px;font-weight:600;letter-spacing:0.5px;">THÔNG TIN THIẾT BỊ</p>
+      <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+        <span style="font-size:13px;color:#64748b;">Tên TV</span>
+        <span style="font-size:13px;font-weight:600;color:#1a1a1a;">Samsung UHD 4K</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+        <span style="font-size:13px;color:#64748b;">Địa chỉ IP</span>
+        <span style="font-size:13px;font-weight:600;color:#1a1a1a;">192.168.1.5</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;">
+        <span style="font-size:13px;color:#64748b;">Trạng thái</span>
+        <span style="font-size:13px;font-weight:600;color:#16a34a;">● Online</span>
+      </div>
+    </div>
+
+    <button onclick="alert('→ Mở Remote Control!')" style="width:100%;background:#2563eb;border:none;border-radius:14px;padding:15px;font-size:15px;font-weight:600;color:#fff;cursor:pointer;">
+      Mở Remote Control →
+    </button>
+  </div>
+
+</div>
+
+<script>
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function pinInput(el, nextId) {
+  if(el.value && nextId) document.getElementById(nextId).focus();
+  el.classList.toggle('filled', !!el.value);
+  checkPin();
+}
+
+function pinBack(e, el, prevId) {
+  if(e.key === 'Backspace' && !el.value && prevId) {
+    document.getElementById(prevId).focus();
+  }
+}
+
+function checkPin() {
+  const filled = ['p1','p2','p3','p4'].every(id => document.getElementById(id).value);
+  const btn = document.getElementById('btnConfirm');
+  btn.disabled = !filled;
+  btn.style.background = filled ? '#2563eb' : '#cbd5e1';
+  btn.style.cursor = filled ? 'pointer' : 'not-allowed';
+}
+</script>

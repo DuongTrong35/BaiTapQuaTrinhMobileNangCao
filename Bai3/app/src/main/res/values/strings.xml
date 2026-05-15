@@ -1,3 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Bai3</string>
+    <!-- ── App Info ───────────────────────────────────────── -->
+    <string name="app_name">LG Remote Pro</string>
+
+    <!-- ── Bottom Navigation ──────────────────────────────── -->
+    <string name="nav_remote">Điều khiển</string>
+    <string name="nav_devices">Thiết bị</string>
+    <string name="nav_settings">Cài đặt</string>
+
+    <!-- ── Onboarding ─────────────────────────────────────── -->
+    <string name="onboarding_title_1">Điều khiển TV LG của bạn</string>
+    <string name="onboarding_desc_1">Biến điện thoại thành remote thông minh cho TV LG. Đầy đủ tính năng, dễ sử dụng.</string>
+    <string name="onboarding_title_2">Kết nối chỉ trong vài giây</string>
+    <string name="onboarding_desc_2">Tự động tìm kiếm TV LG trên mạng Wi-Fi. Ghép nối nhanh chóng và an toàn.</string>
+    <string name="onboarding_title_3">Mọi thứ trong tầm tay</string>
+    <string name="onboarding_desc_3">Điều chỉnh âm lượng, chuyển kênh, mở ứng dụng yêu thích — tất cả từ điện thoại.</string>
+    <string name="onboarding_skip">Bỏ qua</string>
+    <string name="onboarding_next">Tiếp theo</string>
+    <string name="onboarding_start">Bắt đầu ngay</string>
+
+    <!-- ── Device Discovery ───────────────────────────────── -->
+    <string name="discovery_title">Tìm kiếm thiết bị</string>
+    <string name="discovery_scanning">Đang tìm kiếm TV LG…</string>
+    <string name="discovery_empty">Không tìm thấy TV LG nào</string>
+    <string name="discovery_empty_desc">Hãy đảm bảo TV LG đã bật và kết nối cùng mạng Wi-Fi</string>
+    <string name="discovery_retry">Thử lại</string>
+    <string name="discovery_add_manual">Thêm thủ công</string>
+    <string name="discovery_manual_ip_title">Nhập địa chỉ IP của TV LG</string>
+    <string name="discovery_manual_ip_hint">Ví dụ: 192.168.1.100</string>
+    <string name="discovery_confirm">Xác nhận</string>
+    <string name="discovery_cancel">Hủy</string>
+    <string name="discovery_connect">Kết nối</string>
+    <string name="discovery_paired">Đã ghép nối</string>
+    <string name="discovery_not_paired">Chưa kết nối</string>
+    <string name="discovery_invalid_ip">Địa chỉ IP không hợp lệ</string>
+
+    <!-- ── Pairing ────────────────────────────────────────── -->
+    <string name="pairing_title">Ghép nối TV</string>
+    <string name="pairing_message">Vui lòng chấp nhận yêu cầu ghép nối trên màn hình TV của bạn</string>
+    <string name="pairing_waiting">Đang chờ xác nhận từ TV…</string>
+
+    <!-- ── Remote Control ─────────────────────────────────── -->
+    <string name="remote_title">Điều khiển từ xa</string>
+    <string name="remote_connected">Đã kết nối</string>
+    <string name="remote_disconnected">Mất kết nối</string>
+    <string name="remote_connecting">Đang kết nối…</string>
+    <string name="remote_reconnecting">Đang kết nối lại…</string>
+    <string name="remote_not_connected">Chưa kết nối TV</string>
+    <string name="remote_not_connected_desc">Vào tab Thiết bị để kết nối TV</string>
+
+    <!-- ── Power & System ─────────────────────────────────── -->
+    <string name="btn_power">Nguồn</string>
+    <string name="btn_input">Đầu vào</string>
+    <string name="btn_home">Trang chủ</string>
+    <string name="btn_back">Quay lại</string>
+    <string name="btn_settings">Cài đặt TV</string>
+
+    <!-- ── D-Pad ──────────────────────────────────────────── -->
+    <string name="btn_up">Lên</string>
+    <string name="btn_down">Xuống</string>
+    <string name="btn_left">Trái</string>
+    <string name="btn_right">Phải</string>
+    <string name="btn_ok">OK</string>
+
+    <!-- ── Volume & Channel ───────────────────────────────── -->
+    <string name="btn_volume_up">Tăng âm lượng</string>
+    <string name="btn_volume_down">Giảm âm lượng</string>
+    <string name="btn_mute">Tắt tiếng</string>
+    <string name="btn_channel_up">Kênh +</string>
+    <string name="btn_channel_down">Kênh -</string>
+    <string name="btn_channel_list">Danh sách kênh</string>
+    <string name="label_volume">Âm lượng</string>
+    <string name="label_channel">Kênh</string>
+
+    <!-- ── Media Playback ─────────────────────────────────── -->
+    <string name="btn_play">Phát</string>
+    <string name="btn_pause">Tạm dừng</string>
+    <string name="btn_stop">Dừng</string>
+    <string name="btn_rewind">Tua lại</string>
+    <string name="btn_fast_forward">Tua nhanh</string>
+    <string name="btn_record">Ghi hình</string>
+    <string name="btn_prev_track">Bản trước</string>
+    <string name="btn_next_track">Bản tiếp</string>
+
+    <!-- ── Smart TV Apps ──────────────────────────────────── -->
+    <string name="btn_netflix">Netflix</string>
+    <string name="btn_youtube">YouTube</string>
+    <string name="btn_prime_video">Prime Video</string>
+    <string name="btn_disney_plus">Disney+</string>
+    <string name="btn_lg_store">LG Store</string>
+    <string name="label_quick_apps">Ứng dụng nhanh</string>
+
+    <!-- ── Touchpad ───────────────────────────────────────── -->
+    <string name="btn_touchpad">Touchpad</string>
+    <string name="touchpad_hint">Vuốt để di chuyển • Chạm để OK • 2 ngón chạm = Quay lại</string>
+
+    <!-- ── Number Pad ─────────────────────────────────────── -->
+    <string name="label_number_pad">Bàn phím số</string>
+    <string name="btn_show_numpad">Hiện bàn phím số</string>
+    <string name="btn_hide_numpad">Ẩn bàn phím số</string>
+
+    <!-- ── Input Sources ──────────────────────────────────── -->
+    <string name="input_hdmi1">HDMI 1</string>
+    <string name="input_hdmi2">HDMI 2</string>
+    <string name="input_hdmi3">HDMI 3</string>
+    <string name="input_hdmi4">HDMI 4</string>
+    <string name="input_av">AV</string>
+    <string name="input_component">Component</string>
+    <string name="input_usb">USB</string>
+    <string name="label_select_input">Chọn đầu vào</string>
+
+    <!-- ── Settings ───────────────────────────────────────── -->
+    <string name="settings_title">Cài đặt</string>
+    <string name="settings_connection">Kết nối</string>
+    <string name="settings_forget_device">Quên thiết bị</string>
+    <string name="settings_re_pair">Ghép nối lại</string>
+    <string name="settings_change_ip">Đổi địa chỉ IP</string>
+    <string name="settings_remote_custom">Tùy chỉnh remote</string>
+    <string name="settings_compact_layout">Bố cục gọn</string>
+    <string name="settings_compact_layout_desc">Hiển thị remote ở chế độ thu gọn</string>
+    <string name="settings_full_layout">Bố cục đầy đủ</string>
+    <string name="settings_haptic">Rung khi bấm nút</string>
+    <string name="settings_haptic_desc">Phản hồi rung nhẹ mỗi khi bấm nút</string>
+    <string name="settings_appearance">Giao diện</string>
+    <string name="settings_theme">Chế độ giao diện</string>
+    <string name="settings_theme_auto">Tự động</string>
+    <string name="settings_theme_dark">Tối</string>
+    <string name="settings_theme_light">Sáng</string>
+    <string name="settings_about">Giới thiệu</string>
+    <string name="settings_version">Phiên bản ứng dụng</string>
+    <string name="settings_licenses">Giấy phép mã nguồn mở</string>
+    <string name="settings_feedback">Gửi góp ý</string>
+    <string name="settings_notifications">Thông báo</string>
+    <string name="settings_disconnect_alert">Cảnh báo khi TV mất kết nối</string>
+    <string name="settings_disconnect_alert_desc">Nhận thông báo khi mất kết nối với TV</string>
+
+    <!-- ── Connection Status ──────────────────────────────── -->
+    <string name="status_connected">Đã kết nối</string>
+    <string name="status_disconnected">Mất kết nối</string>
+    <string name="status_connecting">Đang kết nối</string>
+    <string name="status_pairing">Đang ghép nối</string>
+    <string name="status_error">Lỗi kết nối</string>
+
+    <!-- ── Errors ─────────────────────────────────────────── -->
+    <string name="error_connection_lost">Mất kết nối. Đang kết nối lại…</string>
+    <string name="error_wifi_required">Vui lòng kết nối Wi-Fi để sử dụng</string>
+    <string name="error_scan_failed">Không thể quét mạng. Vui lòng thử lại.</string>
+    <string name="error_command_failed">Không thể gửi lệnh</string>
+
+    <!-- ── Widget ─────────────────────────────────────────── -->
+    <string name="widget_name">LG Remote Pro</string>
+    <string name="widget_description">Điều khiển nhanh TV LG</string>
+
+    <!-- ── Quick Settings Tile ────────────────────────────── -->
+    <string name="tile_power_label">LG TV Nguồn</string>
+
+    <!-- ── Voice Input ────────────────────────────────────── -->
+    <string name="btn_voice">Nhập giọng nói</string>
+    <string name="voice_listening">Đang nghe…</string>
+
+    <!-- ── Keyboard ───────────────────────────────────────── -->
+    <string name="btn_keyboard">Bàn phím</string>
+    <string name="keyboard_hint">Nhập văn bản gửi đến TV</string>
+
+    <!-- ── Screen Share ───────────────────────────────────── -->
+    <string name="btn_screen_share">Chia sẻ màn hình</string>
+
+    <!-- ── Magic Remote ───────────────────────────────────── -->
+    <string name="btn_cursor_mode">Con trỏ</string>
+
+    <!-- ── General ────────────────────────────────────────── -->
+    <string name="ok">OK</string>
+    <string name="cancel">Hủy</string>
+    <string name="close">Đóng</string>
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
 </resources>

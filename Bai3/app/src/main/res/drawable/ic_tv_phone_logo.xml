@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- TV Display -->
+    <path
+        android:fillColor="#333333"
+        android:pathData="M10,25 h80 v50 h-80 z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M15,30 h70 v40 h-70 z" />
+    <!-- TV Stand -->
+    <path
+        android:fillColor="#555555"
+        android:pathData="M40,75 h20 v5 h-20 z" />
+    <path
+        android:fillColor="#555555"
+        android:pathData="M30,80 h40 v3 h-40 z" />
+    
+    <!-- Phone / Remote -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M65,40 h15 v35 h-15 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M67,42 h11 v25 h-11 z" />
+    <!-- Phone Button -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,70 h5 v5 h-5 z" />
+    
+    <!-- Signals -->
+    <path
+        android:strokeColor="#4CAF50"
+        android:strokeWidth="2"
+        android:pathData="M55,50 Q60,45 60,55" />
+    <path
+        android:strokeColor="#4CAF50"
+        android:strokeWidth="2"
+        android:pathData="M50,45 Q58,38 58,62" />
+</vector>

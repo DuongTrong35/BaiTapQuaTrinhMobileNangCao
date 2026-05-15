@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    D-Pad Navigation Layout — Annular Sector Ring
+    Uses DPadView (custom canvas drawing) to render 4 directional sectors + center OK.
+    The invisible proxy views below carry the IDs that RemoteFragment.java binds to;
+    touch events are handled entirely by DPadView and forwarded via DPadListener.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dpad_size"
+    android:layout_height="@dimen/dpad_size">
+
+    <!-- Actual drawing surface -->
+    <com.example.bai3.ui.remote.DPadView
+        android:id="@+id/dpad_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="D-Pad" />
+
+    <!--
+        Invisible proxy views — keep the IDs so RemoteFragment can still call
+        view.setEnabled() / view.setAlpha() on them.  Actual input is intercepted
+        by DPadView; these are 0×0 and non-clickable.
+    -->
+    <ImageButton
+        android:id="@+id/btn_dpad_up"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/btn_up"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/btn_dpad_down"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/btn_down"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/btn_dpad_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/btn_left"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/btn_dpad_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/btn_right"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_dpad_ok"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/btn_ok"
+        android:visibility="invisible" />
+
+</FrameLayout>

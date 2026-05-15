@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_remote"
+        android:icon="@drawable/ic_remote_tab"
+        android:title="@string/nav_remote" />
+    <item
+        android:id="@+id/navigation_devices"
+        android:icon="@drawable/ic_devices_tab"
+        android:title="@string/nav_devices" />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_tab"
+        android:title="@string/nav_settings" />
+</menu>
